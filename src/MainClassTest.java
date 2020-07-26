@@ -20,7 +20,7 @@ public class MainClassTest
     {
         MainClass y = new MainClass();
         int b = y.getClassNumber();
-        assertThat("method getClassNumber returns number < 45", b, greaterThan(45));
+        assertThat("method getClassNumber returns number less than or equal 45", b, greaterThan(45));
     }
 
     @Test
