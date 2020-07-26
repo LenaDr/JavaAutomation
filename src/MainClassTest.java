@@ -22,6 +22,16 @@ public class MainClassTest
         int b = y.getClassNumber();
         assertThat("method getClassNumber returns number < 45", b, greaterThan(45));
     }
+
+    @Test
+    public void testGetClassString()
+    {
+        MainClass z = new MainClass();
+        String c = z.getClassString();
+
+        assertThat("method getClassString returns string that doesn't contain substrings \"Hello\" or \"hello\" ",
+                c, anyOf(containsString("Hello"), containsString("hello")));
+    }
 }
 
 
